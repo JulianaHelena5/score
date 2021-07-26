@@ -1,0 +1,14 @@
+
+#!/usr/bin/env bash
+
+set -e
+
+cd "${0%/*}/../../"
+
+echo "***Running mix format***"
+mix format
+
+if [ $? -ne 0 ]; then
+ echo "Code must be formatted before commiting"
+ exit 1
+fi
