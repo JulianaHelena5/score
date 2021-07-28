@@ -52,8 +52,8 @@ jobs:
     - name: Check Code Format
       run: mix format
     
-    - name: Run Credo
-      run: mix credo 
-    
     - name: Run tests
       run: mix test
+
+    - name: Run Credo
+      run: mix credo 
