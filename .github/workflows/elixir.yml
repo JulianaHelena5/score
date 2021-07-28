@@ -8,11 +8,27 @@ on:
     branches: 
       - main
 
+env:
+  MIX_ENV: test
+
 jobs:
   build:
 
     name: Build and test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        ports:
+          - 5432:5432
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
     - uses: actions/checkout@v2
