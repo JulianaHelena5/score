@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -e
+
+cd "${0%/*}/../../"
+
+echo "Running format"
+mix format
+
+echo "Running tests"
+mix test
+
+if [ $? -ne 0 ]; then
+ echo "Code must be formatted and whithout failling tests before being pushed!"
+ exit 1
+fi
