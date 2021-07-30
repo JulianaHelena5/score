@@ -1,7 +1,13 @@
-Pattern for Pull Requests
+## Proposal
+
+### Card: [SCR-XX](https://github.com/JulianaHelena5/score/issues/)
 
 ## Context
 << Clearly and concisely describe the relevant motivation and context.>>
+
+The main goal of your pull request.
+
+This PR aims to...
 
 ## Dependencies
 << Depends on a new version of the X library be generated >>

@@ -2,10 +2,10 @@ use Mix.Config
 
 # Configure your database
 config :score, Score.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "score_dev",
-  hostname: "db",
+  username: System.get_env("PGUSER", "postgres"),
+  password: System.get_env("PGPASSWORD", "postgres"),
+  database: System.get_env("PGDATABASE", "score_dev"),
+  hostname: System.get_env("PGHOST", "localhost"),
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
