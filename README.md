@@ -3,7 +3,7 @@
 
 A Phoenix API app, with a single endpoint that returns at max 2 (it can return less), users with more than a random number of points.
 
-Here you can track the list of issues: https://github.com/JulianaHelena5/score/issues
+Here you can track the list of [issues](https://github.com/JulianaHelena5/score/issues) from this Repo.
 
 # Getting Started
  - [How to install dependencies and execute the code](documentation/INSTALLATION.md)
