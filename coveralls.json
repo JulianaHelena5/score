@@ -1,0 +1,19 @@
+{
+  "custom_stop_words": [
+  ],
+
+  "coverage_options": {
+    "output_dir": "cover/",
+    "template_path": "lib/templates/html/htmlcov/",
+    "minimum_coverage": 0
+  },
+
+  "skip_files": [
+    "lib/score_web/telemetry.ex",
+    "test/support/data_case.ex",
+    "test/support/channel_case.ex",
+    "lib/score_web.ex",
+    "lib/score_web/channels/user_socket.ex",
+    "lib/score_web/views/error_helpers.ex"
+  ]
+}

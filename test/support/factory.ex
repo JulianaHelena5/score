@@ -2,7 +2,6 @@ defmodule Score.Factory do
   @moduledoc """
   Helper API to create and save entities in the database.
   """
-  alias Score.Entities.Users
   alias Score.Repo
 
   alias Score.Entities.Schemas.{
@@ -24,13 +23,5 @@ defmodule Score.Factory do
   def insert!(factory_name, attr \\ []) do
     build(factory_name, attr)
     |> Repo.insert!()
-  end
-
-  def insert(:user) do
-    build(:user, %{
-      points: 25
-    })
-    |> Map.from_struct()
-    |> Users.create()
   end
 end
