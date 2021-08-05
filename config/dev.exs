@@ -7,7 +7,8 @@ config :score, Score.Repo,
   database: System.get_env("PGDATABASE", "score_dev"),
   hostname: System.get_env("PGHOST", "localhost"),
   show_sensitive_data_on_connection_error: true,
-  pool_size: 10
+  pool_size: 10,
+  timeout: 60_000
 
 # For development, we disable any cache and enable
 # debugging and code reloading.

@@ -14,6 +14,8 @@
     "test/support/channel_case.ex",
     "lib/score_web.ex",
     "lib/score_web/channels/user_socket.ex",
-    "lib/score_web/views/error_helpers.ex"
+    "lib/score_web/views/error_helpers.ex",
+    "lib/score_web/controllers/fallback_controller.ex",
+    "lib/score_web/router.ex"
   ]
 }

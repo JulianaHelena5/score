@@ -1,4 +1,8 @@
 defmodule Score.Entities.Schemas.UserTest do
+  @moduledoc """
+  Represents the User Schema Tests.
+  """
+
   use Score.DataCase
 
   alias Score.Entities.Schemas.User

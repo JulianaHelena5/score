@@ -14,9 +14,9 @@ defmodule Score.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: Score.PubSub},
       # Start the Endpoint (http/https)
-      ScoreWeb.Endpoint
-      # Start a worker by calling: Score.Worker.start_link(arg)
-      # {Score.Worker, arg}
+      ScoreWeb.Endpoint,
+      # Start Score Server
+      {Score.Server, :score_server}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
