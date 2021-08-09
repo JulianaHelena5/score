@@ -11,7 +11,7 @@
 
 * Here you can track the [Issues](https://github.com/JulianaHelena5/score/issues)'s list from this Repo.
 * To understand my development process you can read the past [Pull Requests](https://github.com/JulianaHelena5/score/pulls?q=is%3Apr+is%3Aclosed) or the [Technical Decisions](documentation/TECHNICAL_DECISIONS.md)'s  file.
-* Here you can access this Project [Demo](https://score.gigalixirapp.com/) deployed with [Gigalixir](https://www.gigalixir.com/) (Temporarily unavailable)
+* Here you can access this Project [Demo](https://score.gigalixirapp.com/)(Temporarily unavailable) deployed with [Gigalixir](https://www.gigalixir.com/) 
 
 If you have any question or suggestion feel free to reach me out by E-mail or [Twitter](https://twitter.com/_julianahelena), let's learn together :)
 
@@ -95,7 +95,6 @@ To run the Tests you should only execute:
 > If you face any error please check the configuration of the `config/test.exs`file explained at the *Database Setup* step.
 # Test Coverage
 
-- TODO: when the repo became public.
 Run this line to check the Test coverage report:
    ```elixir
    mix coveralls #Show coverage
@@ -134,10 +133,10 @@ In this step you'll find some choices I made to try to improve the Project Quali
 
 > Keep moving forward :)
 
-- Fix Gigalixir view.
+- Fix Gigalixir database access.
 - Improve GenServer tests.
-- Study a better way to schedule the GenServer call if needed.
 - Increase test coverage.
+- Study a better way to schedule the GenServer call if needed.
 - Metrics and monitoring.
 
 Do you have any suggestion? Send me, please!

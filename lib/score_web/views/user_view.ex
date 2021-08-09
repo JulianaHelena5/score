@@ -1,10 +1,6 @@
 defmodule ScoreWeb.UserView do
   use ScoreWeb, :view
 
-  # def render("index.json", %{users: users, timestamp: timestamp}) do
-  #   %{user: users, timestamp: timestamp}
-  # end
-
   def render("index.json", %{users: users, timestamp: timestamp}) do
     %{
       users: render_many(users, ScoreWeb.UserView, "user.json"),

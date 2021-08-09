@@ -4,7 +4,8 @@ defmodule Score.Entities.Users do
   """
   import Ecto.Query
 
-  alias Score.{Entities.Schemas.User, Repo}
+  alias Score.Entities.Schemas.User
+  alias Score.Repo
 
   @doc """
   Creates a user.

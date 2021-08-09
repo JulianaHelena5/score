@@ -4,9 +4,7 @@ defmodule Score.Factory do
   """
   alias Score.Repo
 
-  alias Score.Entities.Schemas.{
-    User
-  }
+  alias Score.Entities.Schemas.User
 
   def build(factory_name, attr) do
     factory_name
