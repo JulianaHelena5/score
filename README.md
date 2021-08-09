@@ -4,6 +4,7 @@
 
 ![Elixir CI](https://github.com/JulianaHelena5/score/actions/workflows/elixir.yml/badge.svg)
 ![Gigalixir](https://github.com/JulianaHelena5/score/actions/workflows/gigalixir.yml/badge.svg)
+[![codecov](https://codecov.io/gh/JulianaHelena5/score/branch/main/graph/badge.svg?token=YP11O6PKON)](https://codecov.io/gh/JulianaHelena5/score)
 
 |Elixir 1.12.2   |  Erlang 24.0  | Postgres 13.3  |
 |---|---|---|
