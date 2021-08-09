@@ -2,27 +2,18 @@ defmodule ScoreWeb.Router do
   use ScoreWeb, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, ["json"]
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
-  pipeline :api do
-    plug :accepts, ["json"]
-  end
-
   scope "/", ScoreWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    get "/", UserController, :index
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", ScoreWeb do
-  #   pipe_through :api
-  # end
 
   # Enables LiveDashboard only for development
   #

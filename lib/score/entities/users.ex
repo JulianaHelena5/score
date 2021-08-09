@@ -2,14 +2,12 @@ defmodule Score.Entities.Users do
   @moduledoc """
   Represents the Users Entity.
   """
-  import Ecto.Query, warn: false
+  import Ecto.Query
 
-  alias Score.Entities.Schemas.User
-  alias Score.Repo
+  alias Score.{Entities.Schemas.User, Repo}
 
   @doc """
   Creates a user.
-
   ## Examples
       iex> create(%{field: value})
       {:ok, %User{}}
@@ -24,50 +22,55 @@ defmodule Score.Entities.Users do
   end
 
   @doc """
-  Returns the list of users.
-
+  Gets a list of x (limit) Users greater than a integer value (max_number).
   ## Examples
-      iex> list_all()
-      [%User{}, ...]
+      iex> get_users_with_points_greater_than(34, 2)
+      [%User{}, %User{}]
   """
-  def list_all do
-    Repo.all(User)
-  end
+  def get_users_with_points_greater_than(max_number, _limit) when is_nil(max_number),
+    do: {:error, :max_number_nil}
 
-  @doc """
-  Gets a single user according a point value.
+  def get_users_with_points_greater_than(_max_number, limit) when is_nil(limit),
+    do: {:error, :limit_nil}
 
-  Raises `Ecto.NoResultsError` if none of the Users points match.
+  def get_users_with_points_greater_than(max_number, limit)
+      when not is_integer(limit) or not is_integer(max_number),
+      do: {:error, :incorrect_format_params}
 
-  ## Examples
-      iex> get_by_points(42)
-      %User{}
-
-      no_match_number = 29
-      iex> get_by_points(no_match_number)
-      ** (Ecto.NoResultsError)
-  """
-  def get_by_points(points) do
-    Repo.one(
+  def get_users_with_points_greater_than(max_number, limit)
+      when is_integer(max_number) and is_integer(limit) do
+    Repo.all(
       from(user in User,
-        where: user.points == ^points
+        where: user.points > ^max_number,
+        limit: ^limit
       )
     )
   end
 
   @doc """
-  Updates a user.
+  Updates all User's points with random numbers (0..100).
 
   ## Examples
-      iex> update(user, %{field: new_value})
-      {:ok, %User{}}
+      iex> update_all_points()
+      {:ok, number_of_users_updated}
 
-      iex> update(user, %{field: bad_value})
-      {:error, %Ecto.Changeset{}}
+      iex> update_all_points()
+      {:error, error}
   """
-  def update(%User{} = user, attrs) do
-    user
-    |> User.changeset(attrs)
-    |> Repo.update()
+  def update_all_points() do
+    update(User,
+      set: [
+        points: fragment("floor(random()*100)"),
+        updated_at: fragment("NOW()")
+      ]
+    )
+    |> Repo.update_all([])
+    |> case do
+      {number_of_users_updated, _} ->
+        {:ok, number_of_users_updated}
+
+      error ->
+        {:error, error}
+    end
   end
 end

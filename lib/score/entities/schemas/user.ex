@@ -1,6 +1,6 @@
 defmodule Score.Entities.Schemas.User do
   @moduledoc """
-  Representes the User Schema.
+  Represents the User Schema.
   """
 
   use Ecto.Schema
