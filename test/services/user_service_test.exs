@@ -26,21 +26,15 @@ defmodule Score.Services.UserServiceTest do
       refute Enum.member?(users_list, user_with_42_points)
     end
 
-    test "get_users_with_points_greater_than/2 returns :user_not_found
-    for a given value" do
+    test "get_users_with_points_greater_than/2 returns [] for a given value" do
       insert!(:user, %{points: 42})
       value_43 = 43
 
-      assert log =
-               capture_log(fn ->
-                 assert :user_not_found =
-                          UserService.get_users(%{
-                            max_number: value_43,
-                            limit: 2
-                          })
-               end)
-
-      assert log =~ "Users not found for given (max_number = #{value_43})"
+      assert {:ok, []} =
+               UserService.get_users(%{
+                 max_number: value_43,
+                 limit: 2
+               })
     end
 
     test "get_users_with_points_greater_than/2 returns :incorrect_format_params" do
