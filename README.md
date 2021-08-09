@@ -95,7 +95,6 @@ To run the Tests you should only execute:
 > If you face any error please check the configuration of the `config/test.exs`file explained at the *Database Setup* step.
 # Test Coverage
 
-- TODO: when the repo became public.
 Run this line to check the Test coverage report:
    ```elixir
    mix coveralls #Show coverage
