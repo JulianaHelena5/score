@@ -4,13 +4,14 @@
 
 ![Elixir CI](https://github.com/JulianaHelena5/score/actions/workflows/elixir.yml/badge.svg)
 ![Gigalixir](https://github.com/JulianaHelena5/score/actions/workflows/gigalixir.yml/badge.svg)
+[![codecov](https://codecov.io/gh/JulianaHelena5/score/branch/main/graph/badge.svg?token=YP11O6PKON)](https://codecov.io/gh/JulianaHelena5/score)
 
 |Elixir 1.12.2   |  Erlang 24.0  | Postgres 13.3  |
 |---|---|---|
 
 * Here you can track the [Issues](https://github.com/JulianaHelena5/score/issues)'s list from this Repo.
 * To understand my development process you can read the past [Pull Requests](https://github.com/JulianaHelena5/score/pulls?q=is%3Apr+is%3Aclosed) or the [Technical Decisions](documentation/TECHNICAL_DECISIONS.md)'s  file.
-* Here you can access this Project [Demo](https://score.gigalixirapp.com/) deployed with [Gigalixir](https://www.gigalixir.com/).
+* Here you can access this Project [Demo](https://score.gigalixirapp.com/) deployed with [Gigalixir](https://www.gigalixir.com/) (Temporarily unavailable)
 
 If you have any question or suggestion feel free to reach me out by E-mail or [Twitter](https://twitter.com/_julianahelena), let's learn together :)
 
@@ -46,7 +47,7 @@ To prepare your environment, I made this Installation Guide:
 
 # Running
 
-After the environment setup, clone the Repo and access the project folder created:
+After the environment setup (if you haven't cloned Repo yet), clone the Repo and access the project folder created:
   ```bash
   git clone git@github.com:JulianaHelena5/score.git
   cd score
@@ -105,7 +106,7 @@ Run this line to check the Test coverage report:
 ![Elixir CI](https://github.com/JulianaHelena5/score/actions/workflows/elixir.yml/badge.svg)
 ![Gigalixir](https://github.com/JulianaHelena5/score/actions/workflows/gigalixir.yml/badge.svg)
 
-This project is using [Github Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions) and is being deployed to [Gigalixir](https://score.gigalixirapp.com/).
+This project is using [Github Actions](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions) and is being deployed to [Gigalixir](https://score.gigalixirapp.com/). (Temporarily unavailable)
 
 You can check the [Elixir CI](https://github.com/JulianaHelena5/score/blob/main/.github/workflows/elixir.yml) and [Gigalixir - Deploy](https://github.com/JulianaHelena5/score/blob/main/.github/workflows/gigalixir.yml) files to understand the flow and also check the history of [runs from all workflows](https://github.com/JulianaHelena5/score/actions).
 
@@ -133,6 +134,8 @@ In this step you'll find some choices I made to try to improve the Project Quali
 
 > Keep moving forward :)
 
+- Fix Gigalixir view.
+- Improve GenServer tests.
 - Study a better way to schedule the GenServer call if needed.
 - Increase test coverage.
 - Metrics and monitoring.

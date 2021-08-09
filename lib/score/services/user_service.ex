@@ -13,10 +13,6 @@ defmodule Score.Services.UserService do
         } = _params
       ) do
     case Users.get_users_with_points_greater_than(max_number, limit) do
-      [] ->
-        Logger.info("Users not found for given (max_number = #{max_number})")
-        :user_not_found
-
       {:error, error} ->
         Logger.error("Error trying to get users: #{inspect(error)}")
 
