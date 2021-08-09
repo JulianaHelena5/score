@@ -9,7 +9,7 @@
 |Elixir 1.12.2   |  Erlang 24.0  | Postgres 13.3  |
 |---|---|---|
 
-* Here you can track the [Issues](https://github.com/JulianaHelena5/score/issues?q=is%3Aissue+is%3Aclosed)'s list from this Repo.
+* Here you can track the [Issues](https://github.com/JulianaHelena5/score/issues)'s list from this Repo.
 * To understand my development process you can read the past [Pull Requests](https://github.com/JulianaHelena5/score/pulls?q=is%3Apr+is%3Aclosed) or the [Technical Decisions](documentation/TECHNICAL_DECISIONS.md)'s  file.
 * Here you can access this Project [Demo](https://score.gigalixirapp.com/)(Temporarily unavailable) deployed with [Gigalixir](https://www.gigalixir.com/) 
 
