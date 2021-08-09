@@ -47,7 +47,7 @@ To prepare your environment, I made this Installation Guide:
 
 # Running
 
-After the environment setup, clone the Repo and access the project folder created:
+After the environment setup (if you haven't cloned Repo yet), clone the Repo and access the project folder created:
   ```bash
   git clone git@github.com:JulianaHelena5/score.git
   cd score

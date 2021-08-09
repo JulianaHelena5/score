@@ -21,15 +21,7 @@ config :score, ScoreWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [
-    node: [
-      "node_modules/webpack/bin/webpack.js",
-      "--mode",
-      "development",
-      "--watch-stdin",
-      cd: Path.expand("../assets", __DIR__)
-    ]
-  ]
+  watchers: []
 
 # ## SSL Support
 #
@@ -56,15 +48,15 @@ config :score, ScoreWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :score, ScoreWeb.Endpoint,
-  live_reload: [
-    patterns: [
-      ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"priv/gettext/.*(po)$",
-      ~r"lib/score_web/(live|views)/.*(ex)$",
-      ~r"lib/score_web/templates/.*(eex)$"
-    ]
-  ]
+# config :score, ScoreWeb.Endpoint,
+#   live_reload: [
+#     patterns: [
+#       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
+#       ~r"priv/gettext/.*(po)$",
+#       ~r"lib/score_web/(live|views)/.*(ex)$",
+#       ~r"lib/score_web/templates/.*(eex)$"
+#     ]
+#   ]
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"
