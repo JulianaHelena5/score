@@ -6,7 +6,8 @@ defmodule Score.Entities.UsersTest do
 
   import Score.Factory
 
-  alias Score.Entities.{Users, Schemas.User}
+  alias Score.Entities.Schemas.User
+  alias Score.Entities.Users
 
   @valid_attrs %{points: 0}
   @invalid_attrs %{points: nil}
