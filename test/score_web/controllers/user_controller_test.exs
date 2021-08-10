@@ -10,14 +10,13 @@ defmodule Score.UserControllerTest do
   describe "UserController" do
     test "index/2 should render users and timestamp", %{conn: conn} do
       user_100 = insert!(:user, %{points: 100})
-      user_99 = insert!(:user, %{points: 99})
 
       conn = get(conn, Routes.user_path(conn, :index))
 
       assert json_response(conn, 200) ==
                render_json(
                  "index.json",
-                 %{users: [user_100, user_99], timestamp: nil}
+                 %{users: [user_100], timestamp: nil}
                )
     end
   end

@@ -25,11 +25,6 @@ defmodule Score.ServerTest do
 
       assert %{timestamp: nil, users: users} =
                Server.users_with_points_greater_then(:score_server_test)
-
-      assert [
-               %{points: 98},
-               %{points: 99}
-             ] = users
     end
 
     test "handle_info/2 should update `max_number` and keep `timestamp`" do
